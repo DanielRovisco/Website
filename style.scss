@@ -8,6 +8,7 @@ body {
 }
 section {
   height: 100vh;
+  justify-content: space-between;
 }
 h1,
 p {
@@ -147,6 +148,8 @@ p {
 .homepage {
   .nav {
     display: flex;
+    height: fit-content;
+    width: 50vw;
     padding: 1rem;
     gap: 2rem;
     align-items: flex-start;
@@ -157,6 +160,7 @@ p {
       cursor: pointer;
       display: inline-block;
       position: relative;
+      padding-top: 0.5rem;
 
       &:after {
         content: "";
@@ -184,12 +188,10 @@ p {
 
   .content {
     display: flex;
-    align-content: space-between;
+    align-items: center;
+    gap: 20%;
     height: 95%;
-    .myphoto {
-      width: 50%;
-      height: 100%;
-    }
+
     .text {
       width: 50%;
       height: 100%;
@@ -245,22 +247,31 @@ p {
 
 .workpage {
   h1 {
-    padding: 2rem;
     font-family: "Roboto", sans-serif;
+    padding: 2rem 2rem 0 0;
     font-size: 4rem;
+    height: 4rem;
     letter-spacing: 0.5rem;
     padding-bottom: 7rem;
+    align-items: center;
   }
+  flex-direction: column;
 
   .content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    height: 10rem;
+    width: 100vw;
+    justify-content: space-evenly;
     .categories {
       width: 60%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      height: 10rem;
+
       button {
+        margin: 0.25rem;
         width: 12rem;
         height: 2.2rem;
         background-color: rgba(230, 230, 230, 0);
@@ -289,6 +300,21 @@ p {
       }
     }
   }
+  .workgrid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 80vh;
+    width: 90vw;
+    justify-content: center;
+    gap: 1rem;
+    .work {
+      border: 1px solid white;
+      width: 90%;
+      height: width;
+    }
+  }
 }
 
 .contactpage {
@@ -305,6 +331,7 @@ p {
     height: 100%;
     align-items: center;
     align-content: space-between;
+    width: 100vw;
     .leftside {
       width: 49%;
       display: flex;
@@ -330,9 +357,14 @@ p {
         width: 100%;
         gap: 3rem;
         i {
+          transition: 0.4s all;
           color: white;
           font-size: 2rem;
           cursor: pointer;
+          &:hover {
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+            padding-bottom: 0.5rem;
+          }
         }
 
         .fa-brands {

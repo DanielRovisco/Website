@@ -9,6 +9,9 @@ body {
 
 section {
   height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 h1,
@@ -190,6 +193,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50vw;
   padding: 1rem;
   gap: 2rem;
   -webkit-box-align: start;
@@ -204,6 +211,7 @@ p {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  padding-top: 0.5rem;
 }
 
 .homepage .nav p:after {
@@ -240,14 +248,11 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20%;
   height: 95%;
-}
-
-.homepage .content .myphoto {
-  width: 50%;
-  height: 100%;
 }
 
 .homepage .content .text {
@@ -320,25 +325,37 @@ p {
   max-width: 60%;
 }
 
+.workpage {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .workpage h1 {
-  padding: 2rem;
   font-family: "Roboto", sans-serif;
+  padding: 2rem 2rem 0 0;
   font-size: 4rem;
+  height: 4rem;
   letter-spacing: 0.5rem;
   padding-bottom: 7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .workpage .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 10rem;
+  width: 100vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .workpage .content .categories {
@@ -349,9 +366,14 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
 }
 
 .workpage .content .categories button {
+  margin: 0.25rem;
   width: 12rem;
   height: 2.2rem;
   background-color: rgba(230, 230, 230, 0);
@@ -387,6 +409,28 @@ p {
   z-index: 3;
 }
 
+.workpage .workgrid {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  height: 80vh;
+  width: 90vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.workpage .workgrid .work {
+  border: 1px solid white;
+  width: 90%;
+  height: width;
+}
+
 .contactpage h1 {
   padding: 2rem;
   font-family: "Roboto", sans-serif;
@@ -406,6 +450,7 @@ p {
           align-items: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  width: 100vw;
 }
 
 .contactpage .content .leftside {
@@ -456,9 +501,17 @@ p {
 }
 
 .contactpage .content .leftside .socials i {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
   color: white;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.contactpage .content .leftside .socials i:hover {
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+  padding-bottom: 0.5rem;
 }
 
 .contactpage .content .leftside .socials .fa-brands {
