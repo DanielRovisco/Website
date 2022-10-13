@@ -9,7 +9,7 @@ homePage = document.querySelector(".homepage");
 aboutPage = document.querySelector(".aboutpage");
 workPage = document.querySelector(".workpage");
 contactPage = document.querySelector(".contactpage");
-introVid = document.querySelector(".introvid");
+moreBtn = document.querySelector(".more");
 let menuIsOpen = false;
 let viewModeOn = false;
 /**********
@@ -17,18 +17,19 @@ Listeners
 **********/
 openSideMenu.addEventListener("click", sideMenuFunctions);
 menuItems.addEventListener("click", viewMode);
-introVid.addEventListener("ended", videoEnded);
+moreBtn.addEventListener("click", sideMenuFunctions);
 
 /**********
 Functions
 **********/
+
 function sideMenuFunctions() {
   menuIsOpen = !menuIsOpen;
 
   if (menuIsOpen === true) {
     openSideMenu.style.transform = "rotate(180deg)";
     sideMenu.style.transform = "translateX(55vw)";
-    sideMenu.style.background = "black";
+    sideMenu.style.backgroundImage = "url('img/WhiteBackground.jpg')";;
     viewModeOn = false;
   } else {
     openSideMenu.style.transform = "rotate(0deg)";
@@ -85,18 +86,8 @@ function viewMode(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  homePage.style.display = "none";
-  aboutPage.style.display = "none";
-  workPage.style.display = "none";
-  contactPage.style.display = "none";
-  introVid.play();
-  scroll(0, 0);
+  menuIsOpen=false;
+  viewModeOn=false;
+  console.log("All closed")
 });
 
-function videoEnded(e) {
-  introVid.style.display = "none";
-  homePage.style.display = "flex";
-  aboutPage.style.display = "flex";
-  workPage.style.display = "flex";
-  contactPage.style.display = "flex";
-}

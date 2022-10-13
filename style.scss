@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 section {
-  height: 100vh;
+  height: 105vh;
   justify-content: space-between;
 }
 h1,
@@ -50,11 +50,9 @@ p {
 .sidemenu {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   justify-content: center;
   position: fixed;
-
+  background-image: url(/img/WhiteBackground.jpg);
   z-index: 10000;
   right: 0;
   height: 100vh;
@@ -83,6 +81,7 @@ p {
         display: inline-block;
         cursor: pointer;
         text-align: left;
+        color: Black;
       }
 
       span:before,
@@ -93,7 +92,7 @@ p {
         height: 2px;
         top: 50%;
         margin-top: -0.5px;
-        background: #fff;
+        background: #000000;
       }
 
       span:before {
@@ -101,12 +100,12 @@ p {
       }
       span:after {
         right: 2.5px;
-        background: #fff;
+        background: #000000;
         transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
 
       span:hover:before {
-        background: #fff;
+        background: #000000;
         width: 100%;
         transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
@@ -154,8 +153,8 @@ p {
     gap: 2rem;
     align-items: flex-start;
     p {
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
       font-size: 20px;
       cursor: pointer;
       display: inline-block;
@@ -215,7 +214,7 @@ p {
   h1 {
     padding: 2rem;
     font-family: "Roboto", sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     letter-spacing: 0.5rem;
   }
   .content {
@@ -246,79 +245,74 @@ p {
 }
 
 .workpage {
+  flex-direction: column;
+  section{height: 110vh}
   h1 {
     font-family: "Roboto", sans-serif;
-    padding: 2rem 2rem 0 0;
-    font-size: 4rem;
+    padding: 2rem 2rem 0rem 2rem;
+    font-size: 56px;
     height: 4rem;
     letter-spacing: 0.5rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
     align-items: center;
+
+    .more{
+      font-family: "Montserrat",sans-serif;
+      font-size: 20px;
+      letter-spacing: 0rem;
+      text-decoration: underline 1px solid grey;
+      cursor: pointer; 
+      color: grey;
+
+      &:hover{
+        color: white;
+        text-decoration: underline 1px solid white;
+        transition: all 1s ;
+      }
+    }
   }
-  flex-direction: column;
+  
 
   .content {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     height: 10rem;
     width: 100vw;
     justify-content: space-evenly;
-    .categories {
-      width: 60%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 10rem;
-
-      button {
-        margin: 0.25rem;
-        width: 12rem;
-        height: 2.2rem;
-        background-color: rgba(230, 230, 230, 0);
-        outline: none;
-        border: 2px solid white;
-        -webkit-tap-highlight-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s;
-        cursor: pointer;
-        position: relative;
-
-        &:hover {
-          border-radius: 10px;
-        }
-
-        p {
-          font-family: "Montserrat", sans-serif;
-          color: rgb(255, 255, 255);
-          text-align: center;
-          font-weight: 450;
-          transition: all 0.5s;
-          z-index: 3;
-        }
-      }
-    }
   }
+  
   .workgrid {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 80vh;
+    height: 90vh;
     width: 90vw;
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem;
     .work {
       border: 1px solid white;
-      width: 90%;
-      height: width;
+      cursor: pointer;
+      height: 100%;
+      a{
+      height: 100%;
+      width: 10%;
+    
+      }
+
+      &:hover{
+        box-shadow: 5px 5px 15px 5px  #6c757d;
+        transition: all 0.5s;
+      }
     }
   }
 }
 
+
 .contactpage {
-  h1 {
+  padding-top: 4rem;
+  h1 { 
     padding: 2rem;
     font-family: "Roboto", sans-serif;
     font-size: 4rem;
@@ -410,3 +404,71 @@ p {
     }
   }
 }
+
+
+.projectBase{
+  .info{
+    width: 90vw;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    .objective{
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 90%;
+      margin: 0 auto;
+      gap: 5rem;
+      h1{
+        font-family: "Roboto", sans-serif;
+      }
+      p{
+        font-family: "Montserrat", sans-serif;
+      }
+      
+      }
+    .divider{
+      height: 85%;
+      width: 3px;
+      background-color: white;
+      }
+    .description{
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 90%;
+      margin: 0 auto;
+      gap: 5rem;
+      h1{
+        font-family: "Roboto", sans-serif;
+      }
+      p{
+        font-family: "Montserrat", sans-serif;
+      }
+      }
+    }  
+  .programs{
+    width: 50vw;
+    height: 10vh;
+    border: 1.5px solid white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px; 
+
+
+   .css{
+        height:50px;
+    } 
+
+    img{
+      height: 45px;
+      
+    }
+    }
+  
+ }
