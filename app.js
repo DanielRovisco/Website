@@ -1,3 +1,5 @@
+
+
 /**********
 Elements
 **********/
@@ -44,10 +46,7 @@ function sideMenuFunctions() {
     whiteCircle.style.transform = "rotate(0deg)";
   }
 
-  console.log("Clicked on arrow");
-  console.log("Menu is Open", menuIsOpen);
-  console.log("ViewMode is On", viewModeOn);
-  console.log("---------------------");
+  
 }
 
 if (menuIsOpen === true) {
@@ -79,15 +78,12 @@ function viewMode(e) {
     whiteCircle.style.transform = "rotate(0deg)";
   }
 
-  console.log("Clicked on item");
-  console.log("Menu is Open", menuIsOpen);
-  console.log("ViewMode is On", viewModeOn);
-  console.log("---------------------");
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   menuIsOpen=false;
   viewModeOn=false;
-  console.log("All closed")
+
 });
 
